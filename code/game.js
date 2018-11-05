@@ -1,9 +1,9 @@
 turns = [
-    {color: "#354698", id: "p1", name: "Jugador 1", score: 0},
-    {color: "#C42615", id: "p2", name: "Jugador 2", score: 0},
-    {color: "#EAA81D", id: "p3", name: "Jugador 3", score: 0},
-    {color: "#86B71B", id: "p4", name: "Jugador 4", score: 0},
-    {color: "#7A3AB9", id: "p5", name: "Jugador 5", score: 0}
+    { color: "#354698", id: "p1", name: "Jugador 1", score: 0 },
+    { color: "#C42615", id: "p2", name: "Jugador 2", score: 0 },
+    { color: "#EAA81D", id: "p3", name: "Jugador 3", score: 0 },
+    { color: "#86B71B", id: "p4", name: "Jugador 4", score: 0 },
+    { color: "#7A3AB9", id: "p5", name: "Jugador 5", score: 0 }
 ];
 maxTurnsLength = 2;
 index = 0
@@ -179,4 +179,20 @@ function generateMarkId(obj, x, y) {
 
 function generateId(obj) {
     return "l" + obj.x1 + "_" + obj.y1 + "_" + obj.x2 + "_" + obj.y2;
+}
+
+module.exports = {
+    updateScore,
+    markLine,
+    nextTurn,
+    checkSquare,
+    checkSquareHorizontal,
+    checkSquareVertical,
+    checkDownside,
+    checkUpside,
+    checkLeft,
+    checkRight,
+    allNeighborsAreFill,
+    generateMarkId,
+    generateId
 }
